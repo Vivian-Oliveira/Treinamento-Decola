@@ -1,1 +1,22 @@
 <app-blog-post *ngFor="let item of blogPosts" [post]="item"></app-blog-post>
+
+<article>
+
+  <div>
+    <input type="text" [(ngModel)]= "criarPost.titulo" />
+  </div>
+
+  <div>
+    <input type="text" [(ngModel)]= "criarPost.imagem" />
+  </div>
+
+  <div>
+    <input type="text" [(ngModel)]= "criarPost.texto" />
+  </div>
+
+  <span >
+    <button class="share" (click)="addPost()">Criar Post</button>
+  </span>
+
+</article>
+

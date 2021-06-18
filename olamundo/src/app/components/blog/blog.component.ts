@@ -8,9 +8,11 @@ import { BlogPostModel } from '../blog-post-model';
 })
 export class BlogComponent implements OnInit {
   public blogPosts: Array<BlogPostModel>;
+  public criarPost = new BlogPostModel()
 
   constructor() {
     this.blogPosts = [];
+
     const post = new BlogPostModel();
 
     post.titulo = 'Primeira Postagem!';
@@ -18,7 +20,6 @@ export class BlogComponent implements OnInit {
       'https://www.weblink.com.br/blog/wp-content/uploads/2019/06/O-Que-e-Um-Blog.png';
     post.texto =
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ';
-
     this.blogPosts.push(post);
 
     const post2 = new BlogPostModel();
@@ -41,13 +42,16 @@ export class BlogComponent implements OnInit {
     this.blogPosts.push(post3);
 
 
+
+
   }
 
   ngOnInit(): void {}
 
-  // const addPost = ():<void> => {
+  addPost() : void {
 
-  // }
-
+    this.blogPosts.push(this.criarPost)
+    this.criarPost = new BlogPostModel();
+  }
 
 }

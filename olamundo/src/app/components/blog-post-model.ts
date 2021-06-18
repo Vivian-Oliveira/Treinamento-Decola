@@ -3,4 +3,5 @@ export class BlogPostModel {
   imagem: string = '';
   texto: string = '';
   exibirImagem = true;
+  titulo2: string = ''
 }
