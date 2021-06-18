@@ -3,16 +3,19 @@
   <h2> {{post?.titulo}} </h2>
 
   <div>
-    <input type="checkbox" [(ngModel)]="post.exibirImagem"  /> Exibir imagem?
+    <h1>
+    <input type="checkbox" [(ngModel)]="post.exibirImagem" /> Exibir imagem?
+  </h1>
   </div>
 
   <img *ngIf="post.exibirImagem" [src]="post?.imagem" />
 
   <p> {{post?.texto}} </p>
 
-  <input [(ngModel)]="contador" (ngModelChange)="emiteEvento($event)" type="hidden" value="0" min="-10" />
+ <h1></h1> <input [(ngModel)]="contador" (ngModelChange)="emiteEvento($event)" type="hidden" value="0" min="-10" />
   <span (click)="incrementa()">
     <button class="share" (click)="compartilhar()">Compartilhar!</button>
   </span>
 
 </article>
+
